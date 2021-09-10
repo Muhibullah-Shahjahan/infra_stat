@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Introduction to Hypothesis Testing}{2}{0}{1}
+\beamer@sectionintoc {2}{Common Statistical Tests}{20}{0}{2}

@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Variable Distribution Type Tests (Gaussian)}{2}{0}{1}
+\beamer@sectionintoc {2}{Variable Relationship Tests (correlation)}{6}{0}{2}

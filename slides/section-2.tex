@@ -1,0 +1,209 @@
+% Include Preamble 
+\include{preamble}
+\begin{document}
+
+\maketitle
+% Sectuion Title 
+\section{Variable Distribution Type Tests (Gaussian)}
+
+% Slide 1 
+\begin{frame}[t]{Variable Distribution Type Tests}
+	\begin{itemize}
+		\item Shapiro-Wilk Test
+		\item D’Agostino’s $k^{2}$ Test
+		\item Anderson-Darling Test
+	\end{itemize}
+\end{frame}
+% Slide 2 (Shapiro-Wilk Test)
+\begin{frame}[t]{Shapiro-Wilk Test}
+	Tests whether a data sample has a Gaussian distribution/normal distribution. \\
+	\textbf{Assumptions}\\
+		Observations in each sample are independent and identically distributed (iid).\\
+	\textbf{Interpretation}	\\
+	\begin{itemize}
+		\item H0: The sample has a Gaussian/normal distribution.
+		\item Ha: The sample does not have a Gaussian/normal distribution.
+	\end{itemize}
+\end{frame}
+% Slide 3 (D’Agostino’s $k^{2}$ Test)
+\begin{frame}[t]{D’Agostino’s $k^{2}$ Test}
+	Tests whether a data sample has a Gaussian distribution/normal distribution. \\
+	\textbf{Assumptions}\\
+	Observations in each sample are independent and identically distributed (iid).\\
+	\textbf{Interpretation}	\\
+	\begin{itemize}
+		\item H0: The sample has a Gaussian/normal distribution.
+		\item Ha: The sample does not have a Gaussian/normal distribution.
+	\end{itemize}
+
+	\textbf{Remember} \\
+	\begin{itemize}
+	\item If Data Is Gaussian:
+		\begin{itemize}
+			\item Use Parametric Statistical Methods
+		\end{itemize}
+	\item Else:
+	\begin{itemize}
+		\item Use Nonparametric Statistical Methods
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+% Sectuion Title 
+\section{Variable Relationship Tests (correlation)}
+% Slide 4 (Variable Relationship Tests (correlation))
+\begin{frame}[t]{Variable Relationship Tests}
+	\begin{itemize}
+		\item Pearson’s Correlation 
+		\item Coefficient
+		\item Spearman’s Rank Correlation
+		\item Kendall’s Rank Correlation
+		\item Chi-Squared Test
+	\end{itemize}
+\end{frame}
+
+% Slide 5 (Correlation Test)
+\begin{frame}[t]{Correlation Test}
+	Correlation Measures whether greater values of one variable correspond to greater values in the other. Scaled to always lie between $\pm$ 1 .
+	\begin{itemize}
+		\item Correlation is Positive when the values increase together.
+		\item Correlation is Negative when one value decreases as the other increases.
+		\item A correlation is assumed to be linear.
+		\item 1 is a perfect positive correlation
+		\item 0 is no correlation (the values don’t seem linked at all)
+		\item --1 is a perfect negative correlation
+	\end{itemize}
+\end{frame}
+% Slide 6 (Correlation Methods)
+\begin{frame}[t]{Correlation Methods}
+	\begin{itemize}
+		\item \textbf{Pearson's Correlation Test:} \\ assumes the data is normally distributed and measures linear correlation.
+		\item \textbf{Spearman's Correlation Test:} \\ does not assume normality and measures non-linear correlation.
+		\item \textbf{Kendall's Correlation Test:} \\ similarly does not assume normality and measures non-linear correlation, but it less commonly used.
+		
+	\end{itemize}
+\end{frame}
+% Slide 7 (Difference)
+\begin{frame}[t]{Difference Between Pearson's and Spearman's}
+	\begin{tabular}{ l l }
+		\textbf{Pearson's Test} & \textbf{Spearman's Test}  \\
+		\hline
+		Paramentric Correlation & Non-parametric \\
+		Linear relationship & Non-linear relationship \\
+		Continuous variables & continuous or ordinal variables \\
+		Propotional change & Change not at constant rate
+		
+	\end{tabular}
+\end{frame}
+
+% Slide 8 (Pearson’s Correlation Coefficient)
+\begin{frame}[t]{Pearson’s Correlation Coefficient}
+	Tests whether two samples have a linear relationship. \\
+	\textbf{Assumptions}
+	\begin{itemize}
+		\item Observations in each sample are independent and identically distributed (iid).
+		\item Observations in each sample are normally distributed.
+		\item Observations in each sample have the same variance.
+	\end{itemize}
+
+	\textbf{Interpretation}
+\begin{itemize}
+	\item H0: There is a relationship between two variables
+	\item Ha: There is no relationship between two variables
+\end{itemize}
+\end{frame}
+
+% Slide 9 (Spearman’s Rank Correlation Test)
+\begin{frame}[t]{Spearman’s Rank Correlation Test}
+	Tests whether two samples have a monotonic relationship. \\
+	\textbf{Assumptions}
+	\begin{itemize}
+		\item Observations in each sample are independent and identically distributed (iid).
+		\item Observations in each sample can be ranked.
+	\end{itemize}
+	
+	\textbf{Interpretation}
+	\begin{itemize}
+		\item \textbf{H0 hypothesis:} \\ There is is relationship between variable 1 and variable 2
+		\item \textbf{H1 hypothesis:} \\ There is no relationship between variable 1 and variable 2
+	\end{itemize}
+\end{frame}
+
+% Slide 10 (Kendall’s Rank Correlation Test)
+\begin{frame}[t]{Kendall’s Rank Correlation Test}
+	%Tests whether two samples have a monotonic relationship. \\
+	\textbf{Assumptions}
+	\begin{itemize}
+		\item Observations in each sample are independent and identically distributed (iid).
+		\item Observations in each sample can be ranked.
+	\end{itemize}
+	
+	\textbf{Interpretation}
+	\begin{itemize}
+		\item \textbf{H0 hypothesis:} \\ There is is relationship between variable 1 and variable 2
+		\item \textbf{H1 hypothesis:} \\ There is no relationship between variable 1 and variable 2
+	\end{itemize}
+\end{frame}
+
+% Slide 11 (Chi-Squared Test)
+\begin{frame}[t]{Chi-Squared Test (Con..)}
+
+	\begin{itemize}
+		\item The Chi-square test of independence tests if there is a significant relationship between two categorical variables
+		The test is comparing the observed observations to the expected observations.
+		\item The data is usually displayed in a cross-tabulation format with each row representing a category for one variable and each column representing a category for another variable.
+		\item Chi-square test of independence is an omnibus test. Meaning it tests the data as a whole. This means that one will not be able to tell which levels (categories) of the variables are responsible for the relationship if the Chi-square table is larger than 2×2
+		\item If the test is larger than 2×2, it requires post hoc testing. If this doesn’t make much sense right now, don’t worry. Further explanation will be provided when we start working with the data.
+	\end{itemize}
+\end{frame}
+%slide 12 (Chi-Squared Test (Con..))
+\begin{frame}[t]{Chi-Squared Test (Con..)}
+	\textbf{Assumptions} \\
+		\begin{itemize}
+		\item It should be two categorical  variables(e.g; Gender)
+		\item Each variables should have at leats two groups(e.g; Gender = Female or Male)
+		\item There should be independence of observations(between and within subjects)
+		\item Large sample size
+		\begin{itemize}
+			\item The expected frequencies should be at least 1 for each cell.
+			\item The expected frequencies for the majority(80\%) of the cells should be at least 5.
+		\end{itemize}
+	\end{itemize}
+		If the sample size is small, we have to use \textbf{Fisher's Exact Test}
+		
+		\textbf{Fisher's Exact Test} is similar to Chi-squared test, but it is used for small-sized samples.
+\end{frame}
+
+
+%slide 12 (Chi-Squared Test )
+\begin{frame}[t]{Chi-Squared Test}
+\textbf{Interpretation}
+\begin{itemize}
+	\item The H0 (Null Hypothesis): There is a relationship between variable one and variable two.
+	\item The Ha (Alternative Hypothesis): There is no relationship between variable 1 and variable 2.
+\end{itemize}
+
+\end{frame}
+
+%slide 13 (Contingency Table)
+\begin{frame}[t]{Contingency Table}
+	Contingency table is a table with at least two rows and two columns(2x2) and its use to present categorical data in terms of frequency counts.	
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Thank you slide 
+\plain{Thank You\\ \ \\ \Huge{\smiley}}
+
+\end{document}

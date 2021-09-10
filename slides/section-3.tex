@@ -1,0 +1,208 @@
+% Include Preamble 
+\include{preamble}
+
+\begin{document}
+\maketitle
+% Sectuion Title 
+\section{Compare Sample Means (parametric)}
+% Slide (Compare Sample Means)
+\begin{frame}[t]{Compare Sample Means}
+    \begin{itemize}
+      \item Student’s t-test
+      \item Paired Student’s t-test
+      \item Analysis of Variance Test (ANOVA)
+      \item Repeated Measures ANOVA Test
+	\end{itemize}
+\end{frame}
+% Slide 2 (t-test)
+\begin{frame}[t]{t-test}
+	\begin{itemize}
+		\item It compares \textbf{mean} of \textbf{two groups}
+		\item It is a parametric statistical test.
+		\item It's used to study if there is \textbf{statistical difference} between \textbf{two groups}
+	\end{itemize}
+\end{frame}
+
+% Slide 3 (Types of t-test)
+\begin{frame}[t]{Types of t-test}
+	\begin{itemize}
+		\item One sample t-test
+		\item Paired t-test(Dependent)
+		\item Unpaired t-test(Independent)
+	\end{itemize}
+	Unpaired t-test also have 2 categories \\
+		\begin{itemize}
+			\item Student's t-test
+				\begin{itemize}
+				\item Equal variance
+				\item Two sample t-test
+				\end{itemize}
+			\item Welch t-test
+				\begin{itemize}
+				\item Unequal variance
+				\item Unequal variance t-test
+				\end{itemize}
+		\end{itemize}
+\end{frame}
+
+% Slide 4 (t-test)
+\begin{frame}[t]{Selection of t-test}
+	\begin{itemize}
+		\item One sample t-test(for one sample)
+		\item Paired t-test(for dependent samples)
+		\item Student t-test(When sample size and variance are equal)
+		\item Welch t-test(When sample size and variance are different)
+	\end{itemize}
+\end{frame}
+% Slide 5 (t-test)
+\begin{frame}[t]{One Sample t-test}
+	It compares the mean of one sample \\
+	\begin{itemize}
+		\item Known(from previous study) mean ( $\mu$ )
+		\item Hypothetical mean( $\mu$ )
+	\end{itemize}
+\end{frame}
+
+% Slide 6 (Student's t-test)
+\begin{frame}[t]{Student's t-test (Con..)}
+	\begin{itemize}
+		\item The independent t-test is also called the two sample t-test, student’s t-test, or unpaired t-test.
+		\item It’s an univariate test that tests for a significant difference between the mean of two unrelated groups.
+		\item It compares the mean of two independent samples.
+	\end{itemize}
+	\textbf{Assumptions} \\
+	The assumptions that the data must meet in order for the test results to be valid are: \\
+		\begin{itemize}
+		\item The independent variable (IV) is categorical with at least two levels (groups)
+		\item The dependent variable (DV) is continuous which is measured on an interval or ratio scale
+		\item The distribution of the two groups should follow the normal distribution
+		\item The variances between the two groups are equal
+		\item This can be tested using statistical tests including Levene’s test, F-test, and Bartlett’s test.
+	\end{itemize}
+\end{frame}
+% Slide 7 (Student's t-test)
+\begin{frame}[t]{Student's t-test (Con..)}
+	If any of these assumptions are violated then another test should be used. \\
+	\textbf{Interpretation}\\
+	\textbf{Question: Is there a difference in the height between men and women? \\
+		Hypothesis}
+	\begin{itemize}
+		\item H0: the means of the samples are equal.
+		\item Ha: the means of the samples are unequal.
+	\end{itemize}
+	\textbf{References} \\
+	\url{https://pythonfordatascienceorg.wordpress.com/independent-t-test-python/}
+\end{frame}
+% Slide 8 (The Hypothesis Being Tested)
+\begin{frame}[t]{The Hypothesis Being Tested}
+	\begin{itemize}
+		\item Null Hypothesis (H0): u1 = u2, which translates to the mean of sample$\_$01 is equal to the mean of sample 02
+		\item Alternative Hypothesis (H1): u1 $\neq$ u2, which translates to the means of sample01 is not equal to sample 02
+	\end{itemize}
+	\textbf{Homogeneity of variance} \\
+	Of these tests, the most common assessment for homogeneity of variance is Levene's test. The Levene's test uses an F-test to test the null hypothesis that the variance is equal across groups. A p value less than .05 indicates a violation of the assumption. \\
+	\url{https://en.wikipedia.org/wiki/Levene\%27s_test} \\
+	\url{https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.stats.levene.html}
+\end{frame}
+% Slide 9 (Levene's test)
+\begin{frame}[t]{Levene's test}
+	Levene's test is an inferential statistic used to assess the equality of variances for a variable calculated for two or more groups. \\
+	\textbf{Interpretation}
+	\begin{itemize}
+		\item H0: The variances are equal between two groups
+		\item Ha: The variances are not equal between two groups
+	\end{itemize}
+\end{frame}
+
+% Slide 10 (Checking normal distribution)
+\begin{frame}[t]{Checking normal distribution by shapiro method}
+	\begin{itemize}
+		\item \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.shapiro.html}
+		\item \url{https://stats.stackexchange.com/questions/15696/interpretation-of-shapiro-wilk-test}
+	\end{itemize}
+\end{frame}
+% Slide 11 (Paired t-test)
+\begin{frame}[t]{Paired t-test}
+	It compares the mean between two related samples.(each subject is measured twice)
+\end{frame}
+
+% Slide 12 (The Hypothesis Being Tested)
+\begin{frame}[t]{The Hypothesis Being Tested}
+		\begin{itemize}
+		\item Null Hypothesis (H0): u1 = u2, which translates to the mean of sample 01 is equal to the mean of sample 02
+		\item Alternative hypothesis (Ha): u1 $\neq$ u2, which translates to the means of sample 01 is not equal to sample 02
+		\end{itemize}
+	\textbf{Assumption check} \\
+	\begin{itemize}
+		\item The samples are independently and randomly drawn
+		\item The distribution of the residuals between the two groups should follow the normal distribution
+		\item The variances between the two groups are equal
+	\end{itemize}
+\end{frame}
+% Slide 13 (Welch's t-test)
+\begin{frame}[t]{Welch's t-test (Con..)}
+	\begin{itemize}
+		\item It compares the mean of two independent samples.
+		\item It assumes:
+		\begin{itemize}
+			\item Samples don't have equal variance
+			\item Sample size is not equal.
+		\end{itemize}
+	\end{itemize}
+Welch's t-test Assumptions Like every test, this inferential statistic test has assumptions. The assumptions that the data must meet in order for the test results to be valid are: \\
+	\begin{itemize}
+	\item The independent variable (IV) is categorical with at least two levels (groups)
+	\item The dependent variable (DV) is continuous which is measured on an interval or ratio scale
+	\item The distribution of the two groups should follow the normal distribution If any of these assumptions are violated then another test should be used.
+\end{itemize}
+\end{frame}
+%slide 14 (Welch's t-test)
+\begin{frame}[t]{Welch's t-test}
+	\textbf{Interpretation} \\
+	\begin{itemize}
+		\item Null hypothesis (H0): u1 = u2, which translates to the mean of sample 1 is equal to the mean of sample 2
+		\item Alternative hypothesis (HA): u1 $\neq$ u2, which translates to the mean of sample 1 is not equal to the mean of sample 2
+	\end{itemize}
+\end{frame}
+
+% Sectuion Title 
+\section{Analysis of Variance(ANOVA)}
+% Slide 
+\begin{frame}[t]{ANOVA - Analysis of Variance}
+	\begin{itemize}
+		\item Compares the means of 3(+) groups of data.
+		\item Used to study if there is \textbf{statistical difference} between 3(+) group of data.
+		\item Assumes the data are \textbf{normally distributed} and have \textbf{equal variances}
+	\end{itemize}
+	
+\end{frame}
+% Slide 2 (One-way ANOVA)
+\begin{frame}[t]{One-way ANOVA}
+	\begin{itemize}
+		\item Compares the mean of 3(+) groups of data considering one independent variable or factor.
+		\item Within each group there should be at least three observations.
+	\end{itemize}
+\end{frame}
+% Slide 3 (Two-way ANOVA)
+\begin{frame}[t]{Two-way ANOVA}
+	\begin{itemize}
+		\item Compares the means of 3(+) groups of data considering two independent variables or factors.
+	\end{itemize}
+	\textbf{Assumptions}\\
+	\begin{itemize}
+		\item Observations in each sample are independent and identically distributed (iid).
+		\item Observations in each sample are normally distributed.
+		\item Observations in each sample have the same variance.
+	\end{itemize}
+	\textbf{Interpretation}\\
+	\begin{itemize}
+		\item H0: the means of the samples are equal.
+		\item Ha: one or more of the means of the samples are unequal.
+	\end{itemize}
+\end{frame}
+
+
+% Thank you slide 
+\plain{Thank You\\ \ \\ \Huge{\smiley}}
+
+\end{document}

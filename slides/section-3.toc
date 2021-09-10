@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Compare Sample Means (parametric)}{2}{0}{1}
+\beamer@sectionintoc {2}{Analysis of Variance(ANOVA)}{17}{0}{2}
